@@ -14,7 +14,11 @@ public class MyDrawing extends JPanel {
 	// paintComponent is called automatically when the frame needs
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
-		cat.draw(g, 50, 50);
+		
+		for(int step = 0; step < 500; step++) { // added a loop to print the cat going diagonally 500 times to make a cool effect
+			cat.draw(g, 50 + step, 50 + step);
+		}
+	
 	}
 	
 	/**
